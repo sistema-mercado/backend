@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const bodyParser = require('body-parser');
 const cors = require("cors");
 const dotenv = require("dotenv");
 
@@ -10,6 +11,7 @@ const authRoutes = require('./routes/authRoutes.js');
 
 //configs
 dotenv.config(); 
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
     res.send("Bem-vindo à página principal");
