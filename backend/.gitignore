@@ -1,0 +1,10 @@
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos .env na raiz e em todas as subpastas
+.env
+**/.env
+
+# Ignorar arquivos de log
+*.log
